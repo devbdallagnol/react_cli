@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import bannerImage from "../../assets/banner.png";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
