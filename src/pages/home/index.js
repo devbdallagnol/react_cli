@@ -1,19 +1,28 @@
+import { useNavigate } from "react-router-dom";
 import bannerImage from "../../assets/banner.png";
+
 import { Button } from "../../components/Button";
+
 import { Header } from "../../components/Header";
 
-import { Container, TextContent, Title, TitleHightLight } from "./styles";
+import { Container, Title, TitleHighlight, TextContent } from "./styles";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClickSignIn = () => {
+    navigate("/login");
+  };
+
   return (
     <>
       <Header />
       <Container>
         <div>
           <Title>
-            <TitleHightLight>
+            <TitleHighlight>
               Implemente <br />
-            </TitleHightLight>
+            </TitleHighlight>
             o seu futuro global agora!
           </Title>
           <TextContent>
@@ -24,7 +33,7 @@ const Home = () => {
           <Button
             title="Começar agora"
             variant="secondary"
-            
+            onClick={handleClickSignIn}
           />
         </div>
         <div>
